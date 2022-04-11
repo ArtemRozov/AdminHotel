@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Debug\AdminHotel.exe.config
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Debug\AdminHotel.exe
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Debug\AdminHotel.pdb
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.exe
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.pdb
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.MainForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.CatalogForm.resources
