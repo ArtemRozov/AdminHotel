@@ -31,12 +31,12 @@ namespace AdminHotel
 
         private void listBoxItem_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            CatalogForm catalogForm = new CatalogForm();
+            BookingForm bookingForm = new BookingForm();
 
             int index = listBox1.IndexFromPoint(e.Location);
             if (index != ListBox.NoMatches)
             {
-                catalogForm.Show();
+                bookingForm.Show();
             }                
         }
     }
