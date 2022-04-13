@@ -15,6 +15,7 @@ namespace AdminHotel
         private static string[] appartments = { "appartment - 1", "appartment - 2", "appartment - 3" };
 
         private static Appartment[] app = new Appartment[appartments.Length];
+        
         public MainForm()
         {
             InitializeComponent();           
@@ -22,22 +23,76 @@ namespace AdminHotel
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            comboBox1.Items.Add("All");
+
             for (int i = 0; i < appartments.Length; i++)
             {
-                app[i] = new Appartment(i, "free", i + 198, 2);
-                listBox1.Items.Add("Appartment #" + (app[i].getNumber() + 1) + "; " + app[i].getFree() + "; Price = " + app[i].getPrice() + "; CountRooms = " + app[i].getCountRooms());
+                app[i] = new Appartment(i, "free", i + 198, 2, false);
+                comboBox1.Items.Add("Апартаменти - " + (app[i].getNumber() + 1));
+                dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
             }
         }
 
-        private void listBoxItem_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BookingForm bookingForm = new BookingForm();
-
-            int index = listBox1.IndexFromPoint(e.Location);
-            if (index != ListBox.NoMatches)
+            if(comboBox1.SelectedIndex > 0)
             {
-                bookingForm.Show();
-            }                
+                dataGridView1.Rows.Clear();
+                dataGridView1.Rows.Add(app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (app[comboBox1.SelectedIndex - 1].getNumber() + 1), "", "", "", false);
+            }
+            else
+            {
+                dataGridView1.Rows.Clear();
+
+                for (int i = 0; i < appartments.Length; i++)
+                {
+                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                }
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Enabled)
+            {
+                comboBox1.SelectedItem = comboBox1.Items[0];
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            for (int i = 0;i < appartments.Length; i++)
+            {
+                if(app[i].getFree() == "free")
+                {
+                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                }                
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < appartments.Length; i++)
+            {
+                if (app[i].getFree() == "nonFree")
+                {
+                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                }
+            }
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < appartments.Length; i++)
+            {
+                if (app[i].getBron())
+                {
+                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                }
+            }
         }
     }
 }

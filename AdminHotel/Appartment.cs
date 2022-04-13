@@ -12,13 +12,15 @@ namespace AdminHotel
         private string free;
         private int price;
         private int countRooms;
+        private bool bron;
 
-        public Appartment(int number, string free, int price, int countRooms)
+        public Appartment(int number, string free, int price, int countRooms, bool bron)
         {
             this.number = number;
             this.free = free;
             this.price = price;
             this.countRooms = countRooms;
+            this.bron = bron;
         }
 
         public int getNumber()
@@ -36,6 +38,11 @@ namespace AdminHotel
         public int getCountRooms()
         {
             return countRooms;
+        }
+
+        public bool getBron()
+        {
+            return bron;
         }
     }
 }

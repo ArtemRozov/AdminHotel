@@ -25,7 +25,7 @@ namespace AdminHotel
         {
             for(int i = 0; i < appartments.Length; i++)
             {
-                app[i] = new Appartment(i, "free", i + 198, 2);
+                app[i] = new Appartment(i, "free", i + 198, 2, false);
             }            
            
             comboBox1.Items.AddRange(appartments);
