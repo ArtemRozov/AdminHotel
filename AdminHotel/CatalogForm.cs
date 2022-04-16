@@ -26,16 +26,12 @@ namespace AdminHotel
             for(int i = 0; i < appartments.Length; i++)
             {
                 app[i] = new Appartment(i, "free", i + 198, 2, false);
+                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (app[i].getNumber() + 1), app[i].getCountRooms());
             }            
            
             comboBox1.Items.AddRange(appartments);
 
-            dataGridView1.Rows.Add(app[0].getNumber() + 1, app[0].getFree(), app[0].getPrice(), app[0].getCountRooms());
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            
 
         }
 

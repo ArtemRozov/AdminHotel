@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace AdminHotel
 {
-    public partial class BookingForm : Form
+    public partial class BookingForm : Form 
     {
+        private static string[] appartments = { "appartment - 1", "appartment - 2", "appartment - 3" };
+
+        private static Appartment[] app = new Appartment[appartments.Length];
         public BookingForm()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void BookingForm_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < appartments.Length; i++)
+            {
+                app[i] = new Appartment(i, "free", i + 198, 2, false);
+                comboBox1.Items.Add("Апартаменти - " + (app[i].getNumber() + 1));
+            }
         }
     }
 }

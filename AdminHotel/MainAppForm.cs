@@ -94,5 +94,23 @@ namespace AdminHotel
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CatalogForm form = new CatalogForm();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BookingForm bookingForm = new BookingForm();
+            bookingForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ContrAgentForm contrAgentForm = new ContrAgentForm();
+            contrAgentForm.Show();
+        }
     }
 }

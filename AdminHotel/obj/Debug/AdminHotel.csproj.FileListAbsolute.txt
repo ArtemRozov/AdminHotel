@@ -11,3 +11,4 @@ C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.pdb
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.MainForm.resources
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.CatalogForm.resources
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.BookingForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.ContrAgentForm.resources
