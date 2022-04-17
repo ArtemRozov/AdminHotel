@@ -8,15 +8,18 @@ namespace AdminHotel
 {
     internal static class MainApp
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        [STAThread]
+    /// <summary>
+    /// Главная точка входа для приложения.
+    /// </summary>
+    [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            AppartmentsList.InitArr();
             Application.Run(new MainForm());
+            
         }
     }
 }

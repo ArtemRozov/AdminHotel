@@ -12,19 +12,16 @@ namespace AdminHotel
 {
     public partial class BookingForm : Form 
     {
-        private static string[] appartments = { "appartment - 1", "appartment - 2", "appartment - 3" };
-
-        private static Appartment[] app = new Appartment[appartments.Length];
         public BookingForm()
         {
             InitializeComponent();
         }
         private void BookingForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < appartments.Length; i++)
+            for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                app[i] = new Appartment(i, "free", i + 198, 2, false);
-                comboBox1.Items.Add("Апартаменти - " + (app[i].getNumber() + 1));
+                AppartmentsList.app[i] = new Appartment(i, "free", i + 198, 2, false);
+                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1));
             }
         }
     }

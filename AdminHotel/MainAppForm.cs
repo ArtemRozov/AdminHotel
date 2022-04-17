@@ -8,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace AdminHotel
 {
     public partial class MainForm : Form
-    {
-        private static string[] appartments = { "appartment - 1", "appartment - 2", "appartment - 3" };
-
-        private static Appartment[] app = new Appartment[appartments.Length];
-        
+    {   
         public MainForm()
         {
             InitializeComponent();           
@@ -25,11 +22,10 @@ namespace AdminHotel
         {
             comboBox1.Items.Add("All");
 
-            for (int i = 0; i < appartments.Length; i++)
+            for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                app[i] = new Appartment(i, "free", i + 198, 2, false);
-                comboBox1.Items.Add("Апартаменти - " + (app[i].getNumber() + 1));
-                dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1));
+                dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), "", "", "", false);
             }
         }
 
@@ -38,15 +34,15 @@ namespace AdminHotel
             if(comboBox1.SelectedIndex > 0)
             {
                 dataGridView1.Rows.Clear();
-                dataGridView1.Rows.Add(app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (app[comboBox1.SelectedIndex - 1].getNumber() + 1), "", "", "", false);
+                dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1), "", "", "", false);
             }
             else
             {
                 dataGridView1.Rows.Clear();
 
-                for (int i = 0; i < appartments.Length; i++)
+                for (int i = 0; i < AppartmentsList.app.Length; i++)
                 {
-                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), "", "", "", false);
                 }
             }
         }
@@ -62,11 +58,11 @@ namespace AdminHotel
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0;i < appartments.Length; i++)
+            for (int i = 0;i < AppartmentsList.app.Length; i++)
             {
-                if(app[i].getFree() == "free")
+                if(AppartmentsList.app[i].getFree() == "free")
                 {
-                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), "", "", "", false);
                 }                
             }
         }
@@ -74,11 +70,11 @@ namespace AdminHotel
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < appartments.Length; i++)
+            for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                if (app[i].getFree() == "nonFree")
+                if (AppartmentsList.app[i].getFree() == "nonFree")
                 {
-                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), "", "", "", false);
                 }
             }
         }
@@ -86,11 +82,11 @@ namespace AdminHotel
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < appartments.Length; i++)
+            for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                if (app[i].getBron())
+                if (AppartmentsList.app[i].getBron())
                 {
-                    dataGridView1.Rows.Add(app[i].getNumber() + 1, "Апартаменти - " + (app[i].getNumber() + 1), "", "", "", false);
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), "", "", "", false);
                 }
             }
         }

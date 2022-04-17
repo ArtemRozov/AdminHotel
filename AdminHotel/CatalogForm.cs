@@ -13,9 +13,6 @@ namespace AdminHotel
 {
     public partial class CatalogForm : Form
     {
-        private static string[] appartments = { "appartment - 1", "appartment - 2", "appartment - 3" };
-        
-        private static Appartment[] app = new Appartment[appartments.Length];
         public CatalogForm()
         {
             InitializeComponent();
@@ -23,13 +20,13 @@ namespace AdminHotel
 
         private void CatalogForm_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < appartments.Length; i++)
+            for(int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                app[i] = new Appartment(i, "free", i + 198, 2, false);
-                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (app[i].getNumber() + 1), app[i].getCountRooms());
+                AppartmentsList.app[i] = new Appartment(i, "free", i + 198, 2, false);
+                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getCountRooms());
             }            
            
-            comboBox1.Items.AddRange(appartments);
+            comboBox1.Items.AddRange(AppartmentsList.app);
 
             
 
@@ -38,7 +35,7 @@ namespace AdminHotel
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            dataGridView1.Rows.Add(app[comboBox1.SelectedIndex].getNumber() + 1, app[comboBox1.SelectedIndex].getFree(), app[comboBox1.SelectedIndex].getPrice(), app[comboBox1.SelectedIndex].getCountRooms());
+            dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex].getNumber() + 1, AppartmentsList.app[comboBox1.SelectedIndex].getFree(), AppartmentsList.app[comboBox1.SelectedIndex].getPrice(), AppartmentsList.app[comboBox1.SelectedIndex].getCountRooms());
         }
     }
 }
