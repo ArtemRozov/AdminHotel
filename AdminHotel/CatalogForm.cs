@@ -22,7 +22,6 @@ namespace AdminHotel
         {
             for(int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                AppartmentsList.app[i] = new Appartment(i, "free", i + 198, 2, false);
                 dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getCountRooms());
             }            
            
