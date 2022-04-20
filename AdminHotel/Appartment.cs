@@ -58,6 +58,11 @@ namespace AdminHotel
             return name;
         }
 
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
         public string getInn()
         {
             return inn;
@@ -71,6 +76,26 @@ namespace AdminHotel
         public DateTimeOffset getCheckOut()
         {
             return checkOut;
+        }
+
+        public void setCheckIn(DateTimeOffset checkIn)
+        {
+            this.checkIn = checkIn;
+        }
+
+        public void setCheckOut(DateTimeOffset checkOut)
+        {
+            this.checkOut = checkOut;
+        }
+
+        public void setBron(bool bron)
+        {
+            this.bron = bron;
+        }
+
+        public void setFree()
+        {
+            free = "nonFree";
         }
     }
 }

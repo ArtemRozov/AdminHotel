@@ -25,7 +25,15 @@ namespace AdminHotel
             for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
                 comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1));
-                dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+
+                if (AppartmentsList.app[i].getName() == "")
+                {
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                }
+                else
+                {
+                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                }
             }
         }
 
@@ -34,7 +42,15 @@ namespace AdminHotel
             if(comboBox1.SelectedIndex > 0)
             {
                 dataGridView1.Rows.Clear();
-                dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1), AppartmentsList.app[comboBox1.SelectedIndex - 1].getName(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckIn(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckOut(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getBron());
+
+                if (AppartmentsList.app[comboBox1.SelectedIndex - 1].getName() == "")
+                {
+                    dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1), AppartmentsList.app[comboBox1.SelectedIndex - 1].getName(), "", "", AppartmentsList.app[comboBox1.SelectedIndex - 1].getBron());
+                }
+                else
+                {
+                    dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber() + 1), AppartmentsList.app[comboBox1.SelectedIndex - 1].getName(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckIn(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckOut(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getBron());
+                }
             }
             else
             {
@@ -42,7 +58,14 @@ namespace AdminHotel
 
                 for (int i = 0; i < AppartmentsList.app.Length; i++)
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    if (AppartmentsList.app[i].getName() == "")
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    }
                 }
             }
         }
@@ -63,7 +86,14 @@ namespace AdminHotel
             {
                 if(AppartmentsList.app[i].getFree() == "free")
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    if (AppartmentsList.app[i].getName() == "")
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    }
                 }                
             }
         }
@@ -75,7 +105,14 @@ namespace AdminHotel
             {
                 if (AppartmentsList.app[i].getFree() == "nonFree")
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    if (AppartmentsList.app[i].getName() == "")
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    }
                 }
             }
         }
@@ -87,7 +124,14 @@ namespace AdminHotel
             {
                 if (AppartmentsList.app[i].getBron())
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    if (AppartmentsList.app[i].getName() == "")
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber() + 1, "Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    }
                 }
             }
         }
