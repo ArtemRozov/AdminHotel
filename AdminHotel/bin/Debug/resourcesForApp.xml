@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appartments>
+  <appartment number="1" free="free" price="200" countRooms="2" bron="false" name="" inn="" checkIn="" checkOut=""> appartment - 1 </appartment>
+  <appartment number="2" free="free" price="300" countRooms="1" bron="false" name="" inn="" checkIn="" checkOut=""> appartment - 2 </appartment>
+  <appartment number="3" free="free" price="400" countRooms="3" bron="false" name="" inn="" checkIn="" checkOut=""> appartment - 3 </appartment>
+</appartments>

@@ -22,7 +22,7 @@ namespace AdminHotel
         {
             for(int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1), AppartmentsList.app[i].getCountRooms());
+                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getCountRooms());
             }            
            
             comboBox1.Items.AddRange(AppartmentsList.app);
@@ -34,7 +34,7 @@ namespace AdminHotel
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex].getNumber() + 1, AppartmentsList.app[comboBox1.SelectedIndex].getFree(), AppartmentsList.app[comboBox1.SelectedIndex].getPrice(), AppartmentsList.app[comboBox1.SelectedIndex].getCountRooms());
+            dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex].getNumber(), AppartmentsList.app[comboBox1.SelectedIndex].getFree(), AppartmentsList.app[comboBox1.SelectedIndex].getPrice(), AppartmentsList.app[comboBox1.SelectedIndex].getCountRooms());
         }
     }
 }

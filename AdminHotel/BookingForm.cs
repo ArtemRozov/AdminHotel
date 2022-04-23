@@ -22,7 +22,7 @@ namespace AdminHotel
 
             for (int i = 0; i < AppartmentsList.app.Length; i++)
             {
-                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber() + 1));                                                            
+                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber()));                                                            
             }
 
             for (int i = 0; i < AppartmentsList.getNames().Count; i++)
