@@ -18,35 +18,42 @@ namespace AdminHotel
         }
         private void BookingForm_Load(object sender, EventArgs e)
         {
-            ContrAgentForm contrAgentForm = new ContrAgentForm();
-
-            for (int i = 0; i < AppartmentsList.app.Length; i++)
+            for (int i = 0; i < AppartmentsList.App.Length; i++)
             {
-                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber()));                                                            
+                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.App[i].Number));                                                            
             }
 
-            for (int i = 0; i < AppartmentsList.getNames().Count; i++)
+            for (int i = 0; i < AppartmentsList.GetNames().Count; i++)
             {
-                comboBox2.Items.Add(AppartmentsList.getNames().ElementAt(i));
+                comboBox2.Items.Add(AppartmentsList.GetNames().ElementAt(i));
             }
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             ContrAgentForm contrAgentForm = new ContrAgentForm();
             contrAgentForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {            
-            AppartmentsList.app[comboBox1.SelectedIndex].setName(comboBox2.Text);
-            AppartmentsList.app[comboBox1.SelectedIndex].setCheckIn(dateTimePicker2.Value);
-            AppartmentsList.app[comboBox1.SelectedIndex].setCheckOut(dateTimePicker3.Value);
-            AppartmentsList.app[comboBox1.SelectedIndex].setBron(checkBox1.Checked);
-            AppartmentsList.app[comboBox1.SelectedIndex].setFree();
+            AppartmentsList.App[comboBox1.SelectedIndex].Name = comboBox2.Text;
+            AppartmentsList.App[comboBox1.SelectedIndex].CheckIn = dateTimePicker2.Value;
+            AppartmentsList.App[comboBox1.SelectedIndex].CheckOut = dateTimePicker3.Value;
+            AppartmentsList.App[comboBox1.SelectedIndex].Bron = checkBox1.Checked;
+            AppartmentsList.App[comboBox1.SelectedIndex].Free = "nonFree";
 
             Close();            
+        }
+
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && (e.KeyChar <= 39 || e.KeyChar >= 46) && number != 47 && number != 61) //калькулятор
+            {
+                e.Handled = true;
+            }
         }
     }
 }

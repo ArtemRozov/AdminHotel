@@ -20,21 +20,17 @@ namespace AdminHotel
 
         private void CatalogForm_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < AppartmentsList.app.Length; i++)
+            for(int i = 0; i < AppartmentsList.App.Length; i++)
             {
-                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getCountRooms());
-            }            
-           
-            comboBox1.Items.AddRange(AppartmentsList.app);
-
-            
-
+                dataGridView1.Rows.Add("0000000" + i, " Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].CountRooms);
+                comboBox1.Items.Add("апартаменти - " + AppartmentsList.App[i].Number);
+            }   
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex].getNumber(), AppartmentsList.app[comboBox1.SelectedIndex].getFree(), AppartmentsList.app[comboBox1.SelectedIndex].getPrice(), AppartmentsList.app[comboBox1.SelectedIndex].getCountRooms());
+            dataGridView1.Rows.Add(AppartmentsList.App[comboBox1.SelectedIndex].Number, AppartmentsList.App[comboBox1.SelectedIndex].Free, AppartmentsList.App[comboBox1.SelectedIndex].Price, AppartmentsList.App[comboBox1.SelectedIndex].CountRooms);
         }
     }
 }

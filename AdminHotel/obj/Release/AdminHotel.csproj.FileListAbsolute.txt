@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\resourcesForApp.xml
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.exe.config
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.exe
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.pdb
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.BookingForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.CatalogForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.ContrAgentForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.MainForm.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.exe
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.pdb
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj.AssemblyReference.cache

@@ -15,15 +15,14 @@ namespace AdminHotel
 
     internal static class AppartmentsList
     {
-        private static List<string> names = new List<string>();
-        public static Appartment[] app { get; set; }
+        private static readonly List<string> names = new List<string>();
+        public static Appartment[] App { get; set; }
 
         public static void InitArr()
         {
-            app = new Appartment[3];
-
+            App = new Appartment[3];
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\resourcesForApp.xml");
+            xmlDoc.Load(@"resourcesForApp.xml");
             XmlNodeList userNodes = xmlDoc.SelectNodes("//appartments/appartment");
 
             for (int i = 0; i < 3; i++)
@@ -36,18 +35,36 @@ namespace AdminHotel
                 string name = userNodes[i].Attributes["name"].Value;
                 string inn = userNodes[i].Attributes["inn"].Value;
 
-                DateTimeOffset checkIn =DateTimeOffset.Parse(userNodes[i].Attributes["checkIn"].Value);
-                DateTimeOffset checkOut = DateTimeOffset.Parse(userNodes[i].Attributes["checkOut"].Value);
+                DateTimeOffset checkIn;
+                DateTimeOffset checkOut;
 
-                app[i] = new Appartment(number, free, price, countRooms, bron, name, inn, checkIn, checkOut);
+                if (userNodes[i].Attributes["checkIn"].Value != "")
+                {
+                    checkIn = DateTimeOffset.Parse(userNodes[i].Attributes["checkIn"].Value);
+                }
+                else
+                {
+                    checkIn = DateTimeOffset.Now;
+                }
+
+                if(userNodes[i].Attributes["checkOut"].Value != "")
+                {
+                    checkOut = DateTimeOffset.Parse(userNodes[i].Attributes["checkOut"].Value);
+                }
+                else
+                {
+                    checkOut = DateTimeOffset.Now;
+                }
+
+                App[i] = new Appartment(number, free, price, countRooms, bron, name, inn, checkIn, checkOut);
             }
         }
 
-        public static List<string> getNames()
+        public static List<string> GetNames()
         {
             return names;
         }
-        public static void setNames(string name)
+        public static void SetNames(string name)
         {
             names.Add(name);
         }

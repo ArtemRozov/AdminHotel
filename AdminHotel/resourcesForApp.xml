@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <appartments>
-  <appartment number="1" free="free" price="500" countRooms="2" bron="False" name="" inn="" checkIn="23.04.2022 19:02:44 +03:00" checkOut="23.04.2022 19:02:44 +03:00"> appartment - 1 </appartment>
-  <appartment number="2" free="nonFree" price="300" countRooms="1" bron="True" name="Ivan" inn="" checkIn="23.04.2022 19:02:44 +03:00" checkOut="23.04.2022 19:02:44 +03:00"> appartment - 2 </appartment>
-  <appartment number="3" free="nonFree" price="400" countRooms="3" bron="False" name="Vlad" inn="" checkIn="23.04.2022 19:06:41 +03:00" checkOut="30.04.2022 19:06:41 +03:00"> appartment - 3 </appartment>
+  <appartment number="1" free="free" price="500" countRooms="2" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 1 </appartment>
+  <appartment number="2" free="free" price="300" countRooms="1" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 2 </appartment>
+  <appartment number="3" free="free" price="400" countRooms="3" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 3 </appartment>
 </appartments>

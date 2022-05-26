@@ -24,55 +24,55 @@ namespace AdminHotel
         {
             comboBox1.Items.Add("All");
 
-            for (int i = 0; i < AppartmentsList.app.Length; i++)
+            for (int i = 0; i < AppartmentsList.App.Length; i++)
             {
-                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.app[i].getNumber()));
+                comboBox1.Items.Add("Апартаменти - " + (AppartmentsList.App[i].Number));
 
-                if (AppartmentsList.app[i].getName() == "")
+                if (AppartmentsList.App[i].Name == "")
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                    dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, "", "", AppartmentsList.App[i].Bron);
                 }
                 else
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                    dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, AppartmentsList.App[i].CheckIn, AppartmentsList.App[i].CheckOut, AppartmentsList.App[i].Bron);
                 }
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex > 0)
             {
                 dataGridView1.Rows.Clear();
 
-                if (AppartmentsList.app[comboBox1.SelectedIndex - 1].getName() == "")
+                if (AppartmentsList.App[comboBox1.SelectedIndex - 1].Name == "")
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber(), "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber()), AppartmentsList.app[comboBox1.SelectedIndex - 1].getName(), "", "", AppartmentsList.app[comboBox1.SelectedIndex - 1].getBron());
+                    dataGridView1.Rows.Add(AppartmentsList.App[comboBox1.SelectedIndex - 1].Number, "Апартаменти - " + (AppartmentsList.App[comboBox1.SelectedIndex - 1].Number), AppartmentsList.App[comboBox1.SelectedIndex - 1].Name, "", "", AppartmentsList.App[comboBox1.SelectedIndex - 1].Bron);
                 }
                 else
                 {
-                    dataGridView1.Rows.Add(AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber(), "Апартаменти - " + (AppartmentsList.app[comboBox1.SelectedIndex - 1].getNumber()), AppartmentsList.app[comboBox1.SelectedIndex - 1].getName(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckIn(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getCheckOut(), AppartmentsList.app[comboBox1.SelectedIndex - 1].getBron());
+                    dataGridView1.Rows.Add(AppartmentsList.App[comboBox1.SelectedIndex - 1].Number, "Апартаменти - " + (AppartmentsList.App[comboBox1.SelectedIndex - 1].Number), AppartmentsList.App[comboBox1.SelectedIndex - 1].Name, AppartmentsList.App[comboBox1.SelectedIndex - 1].CheckIn, AppartmentsList.App[comboBox1.SelectedIndex - 1].CheckOut, AppartmentsList.App[comboBox1.SelectedIndex - 1].Bron);
                 }
             }
             else
             {
                 dataGridView1.Rows.Clear();
 
-                for (int i = 0; i < AppartmentsList.app.Length; i++)
+                for (int i = 0; i < AppartmentsList.App.Length; i++)
                 {
-                    if (AppartmentsList.app[i].getName() == "")
+                    if (AppartmentsList.App[i].Name == "")
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, "", "", AppartmentsList.App[i].Bron);
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, AppartmentsList.App[i].CheckIn, AppartmentsList.App[i].CheckOut, AppartmentsList.App[i].Bron);
                     }
                 }
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Enabled)
             {
@@ -81,84 +81,84 @@ namespace AdminHotel
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0;i < AppartmentsList.app.Length; i++)
+            for (int i = 0;i < AppartmentsList.App.Length; i++)
             {
-                if(AppartmentsList.app[i].getFree() == "free")
+                if(AppartmentsList.App[i].Free == "free")
                 {
-                    if (AppartmentsList.app[i].getName() == "")
+                    if (AppartmentsList.App[i].Name == "")
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, "", "", AppartmentsList.App[i].Bron);
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, AppartmentsList.App[i].CheckIn, AppartmentsList.App[i].CheckOut, AppartmentsList.App[i].Bron);
                     }
                 }                
             }
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < AppartmentsList.app.Length; i++)
+            for (int i = 0; i < AppartmentsList.App.Length; i++)
             {
-                if (AppartmentsList.app[i].getFree() == "nonFree")
+                if (AppartmentsList.App[i].Free == "nonFree")
                 {
-                    if (AppartmentsList.app[i].getName() == "")
+                    if (AppartmentsList.App[i].Name == "")
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, "", "", AppartmentsList.App[i].Bron);
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, AppartmentsList.App[i].CheckIn, AppartmentsList.App[i].CheckOut, AppartmentsList.App[i].Bron);
                     }
                 }
             }
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton4_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < AppartmentsList.app.Length; i++)
+            for (int i = 0; i < AppartmentsList.App.Length; i++)
             {
-                if (AppartmentsList.app[i].getBron())
+                if (AppartmentsList.App[i].Bron)
                 {
-                    if (AppartmentsList.app[i].getName() == "")
+                    if (AppartmentsList.App[i].Name == "")
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), "", "", AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, "", "", AppartmentsList.App[i].Bron);
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(AppartmentsList.app[i].getNumber(), "Апартаменти - " + (AppartmentsList.app[i].getNumber()), AppartmentsList.app[i].getName(), AppartmentsList.app[i].getCheckIn(), AppartmentsList.app[i].getCheckOut(), AppartmentsList.app[i].getBron());
+                        dataGridView1.Rows.Add(AppartmentsList.App[i].Number, "Апартаменти - " + (AppartmentsList.App[i].Number), AppartmentsList.App[i].Name, AppartmentsList.App[i].CheckIn, AppartmentsList.App[i].CheckOut, AppartmentsList.App[i].Bron);
                     }
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             CatalogForm form = new CatalogForm();
             form.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             BookingForm bookingForm = new BookingForm();
             bookingForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             ContrAgentForm contrAgentForm = new ContrAgentForm();
             contrAgentForm.Show();
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if(e.ColumnIndex == 1 && AppartmentsList.app[e.RowIndex].getName() == "")
+            if(e.ColumnIndex == 1 && AppartmentsList.App[e.RowIndex].Name == "")
             {
                 BookingForm bookingForm = new BookingForm();
                 bookingForm.Show();
@@ -168,21 +168,21 @@ namespace AdminHotel
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\resourcesForApp.xml");
+            xmlDoc.Load(@"resourcesForApp.xml");
             XmlNodeList userNodes = xmlDoc.SelectNodes("//appartments/appartment");
 
             for(int i = 0; i < userNodes.Count; i++)
             {
-                userNodes[i].Attributes.GetNamedItem("name").Value = AppartmentsList.app[i].getName();
-                userNodes[i].Attributes.GetNamedItem("bron").Value = AppartmentsList.app[i].getBron().ToString();
-                userNodes[i].Attributes.GetNamedItem("free").Value = AppartmentsList.app[i].getFree();
-                userNodes[i].Attributes.GetNamedItem("inn").Value = AppartmentsList.app[i].getInn();
+                userNodes[i].Attributes.GetNamedItem("name").Value = AppartmentsList.App[i].Name;
+                userNodes[i].Attributes.GetNamedItem("bron").Value = AppartmentsList.App[i].Bron.ToString();
+                userNodes[i].Attributes.GetNamedItem("free").Value = AppartmentsList.App[i].Free;
+                userNodes[i].Attributes.GetNamedItem("inn").Value = AppartmentsList.App[i].Inn;
 
-                userNodes[i].Attributes.GetNamedItem("checkIn").Value = AppartmentsList.app[i].getCheckIn().ToString();
-                userNodes[i].Attributes.GetNamedItem("checkOut").Value = AppartmentsList.app[i].getCheckOut().ToString();
+                userNodes[i].Attributes.GetNamedItem("checkIn").Value = AppartmentsList.App[i].CheckIn.ToString();
+                userNodes[i].Attributes.GetNamedItem("checkOut").Value = AppartmentsList.App[i].CheckOut.ToString();
             }
 
-            xmlDoc.Save(@"C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\resourcesForApp.xml");
+            xmlDoc.Save(@"resourcesForApp.xml");
         }
     }
 }
