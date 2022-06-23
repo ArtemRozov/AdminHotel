@@ -22,7 +22,7 @@ namespace AdminHotel.Forms
         private void ExitButton_Click(object sender, EventArgs e)
         {
             AppartmentsList.IsChanged = false;
-            Close();
+            Application.Exit();
         }
 
         // Зберігання усіх змін у файл при закритті програми
@@ -70,7 +70,7 @@ namespace AdminHotel.Forms
             xmlDoc.Save(@"Data\resourcesForApp.xml");
 
             AppartmentsList.IsChanged = false;
-            Close();
+            Application.Exit();
         }
 
        

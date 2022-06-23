@@ -175,10 +175,11 @@
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(920, 470);
             this.Name = "CatalogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalog";
+            this.Text = "Admin Hoteel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatalogForm_FormClosing);
             this.Load += new System.EventHandler(this.CatalogForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

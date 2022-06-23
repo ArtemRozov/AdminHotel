@@ -5,7 +5,7 @@
   <appartment number="3" free="free" price="400" countRooms="3" bron="False" name="" inn="" checkIn="19.06.2022 14:51:22 +03:00" checkOut="19.06.2022 14:51:22 +03:00"> appartment - 3 </appartment>
   <contrAgent name="Ivanov" inn="1234567890" number="1"> people-1 </contrAgent>
   <contrAgent name="Petrov" inn="123" number=""> people-2 </contrAgent>
-  <contrAgent name="" inn="" number=""> people-3 </contrAgent>
+  <contrAgent name="щшощш" inn="1234567890" number=""> people-3 </contrAgent>
   <contrAgent name="" inn="" number=""> people-4 </contrAgent>
   <contrAgent name="" inn="" number=""> people-5 </contrAgent>
   <contrAgent name="" inn="" number=""> people-6 </contrAgent>

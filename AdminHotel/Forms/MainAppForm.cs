@@ -274,6 +274,10 @@ namespace AdminHotel
             {
                 SaveDialogForm saveDialogForm = new SaveDialogForm();
                 saveDialogForm.ShowDialog();
+            }
+            else
+            {
+                Application.Exit();
             }                    
         }
     }

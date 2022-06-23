@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaveDialogForm));
             this.SaveButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -72,11 +73,12 @@
             this.ClientSize = new System.Drawing.Size(312, 64);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SaveButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(330, 111);
             this.MinimumSize = new System.Drawing.Size(330, 111);
             this.Name = "SaveDialogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SaveDialogForm";
+            this.Text = "Admin Hotel";
             this.ResumeLayout(false);
 
         }
