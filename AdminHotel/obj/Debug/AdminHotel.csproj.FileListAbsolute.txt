@@ -12,4 +12,5 @@ C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.MainForm
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.CatalogForm.resources
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.BookingForm.resources
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.ContrAgentForm.resources
-C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Debug\resourcesForApp.xml
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Debug\Data\resourcesForApp.xml
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Debug\AdminHotel.Forms.SaveDialogForm.resources

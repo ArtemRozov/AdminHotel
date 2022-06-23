@@ -46,45 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appartment.cs" />
-    <Compile Include="BookingForm.cs">
+    <Compile Include="Forms\SaveDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookingForm.Designer.cs">
+    <Compile Include="Forms\SaveDialogForm.Designer.cs">
+      <DependentUpon>SaveDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Appartment.cs" />
+    <Compile Include="Forms\BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookingForm.Designer.cs">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppartmentsList.cs" />
-    <Compile Include="ContrAgentForm.cs">
+    <Compile Include="src\AppartmentsList.cs" />
+    <Compile Include="Forms\ContrAgentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContrAgentForm.Designer.cs">
+    <Compile Include="Forms\ContrAgentForm.Designer.cs">
       <DependentUpon>ContrAgentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainAppForm.cs">
+    <Compile Include="Forms\MainAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainAppForm.Designer.cs">
+    <Compile Include="Forms\MainAppForm.Designer.cs">
       <DependentUpon>MainAppForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CatalogForm.cs">
+    <Compile Include="Forms\CatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CatalogForm.Designer.cs">
+    <Compile Include="Forms\CatalogForm.Designer.cs">
       <DependentUpon>CatalogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainApp.cs" />
+    <Compile Include="src\ContrAgent.cs" />
+    <Compile Include="src\MainApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BookingForm.resx">
+    <EmbeddedResource Include="Forms\BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CatalogForm.resx">
+    <EmbeddedResource Include="Forms\CatalogForm.resx">
       <DependentUpon>CatalogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContrAgentForm.resx">
+    <EmbeddedResource Include="Forms\ContrAgentForm.resx">
       <DependentUpon>ContrAgentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainAppForm.resx">
+    <EmbeddedResource Include="Forms\MainAppForm.resx">
       <DependentUpon>MainAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveDialogForm.resx">
+      <DependentUpon>SaveDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,7 +120,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resourcesForApp.xml">
+    <Content Include="Data\resourcesForApp.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

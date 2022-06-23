@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appartments>
+  <appartment number="1" free="free" price="500" countRooms="2" bron="False" name="" inn="" checkIn="19.06.2022 14:54:19 +03:00" checkOut="30.06.2022 14:54:19 +03:00"> appartment - 1 </appartment>
+  <appartment number="2" free="free" price="300" countRooms="1" bron="False" name="" inn="" checkIn="19.06.2022 14:51:22 +03:00" checkOut="19.06.2022 14:51:22 +03:00"> appartment - 2 </appartment>
+  <appartment number="3" free="free" price="400" countRooms="3" bron="False" name="" inn="" checkIn="19.06.2022 14:51:22 +03:00" checkOut="19.06.2022 14:51:22 +03:00"> appartment - 3 </appartment>
+  <contrAgent name="Ivanov" inn="1234567890" number="1"> people-1 </contrAgent>
+  <contrAgent name="Petrov" inn="123" number=""> people-2 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-3 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-4 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-5 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-6 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-7 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-8 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-9 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-10 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-11 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-12 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-13 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-14 </contrAgent>
+  <contrAgent name="" inn="" number=""> people-15 </contrAgent>
+</appartments>

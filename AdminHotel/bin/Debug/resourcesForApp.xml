@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<appartments>
-  <appartment number="1" free="free" price="500" countRooms="2" bron="False" name="" inn="" checkIn="26.05.2022 17:15:56 +03:00" checkOut="26.05.2022 17:15:56 +03:00"> appartment - 1 </appartment>
-  <appartment number="2" free="nonFree" price="300" countRooms="1" bron="True" name="Ivan" inn="" checkIn="26.05.2022 17:16:13 +03:00" checkOut="29.05.2022 17:16:13 +03:00"> appartment - 2 </appartment>
-  <appartment number="3" free="free" price="400" countRooms="3" bron="False" name="" inn="" checkIn="26.05.2022 17:15:56 +03:00" checkOut="26.05.2022 17:15:56 +03:00"> appartment - 3 </appartment>
-</appartments>

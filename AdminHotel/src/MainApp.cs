@@ -16,8 +16,9 @@ namespace AdminHotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            // Беремо інформацію по апартаментам з файлу
             AppartmentsList.InitArr();
+
             Application.Run(new MainForm());
             
         }

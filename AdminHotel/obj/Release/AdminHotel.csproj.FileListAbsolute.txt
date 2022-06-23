@@ -1,4 +1,3 @@
-C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\resourcesForApp.xml
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.exe.config
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.exe
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\AdminHotel.pdb
@@ -13,3 +12,5 @@ C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.exe
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.pdb
 C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\bin\Release\Data\resourcesForApp.xml
+C:\Users\Lenovo\source\repos\AdminHotel\AdminHotel\obj\Release\AdminHotel.Forms.SaveDialogForm.resources
