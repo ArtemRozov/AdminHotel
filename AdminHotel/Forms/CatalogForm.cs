@@ -25,7 +25,7 @@ namespace AdminHotel
             {
                 dataGridView1.Rows.Add("0000000" + i,
                     " Апартаменти - " + (AppartmentsList.Appartments[i].Number),
-                    AppartmentsList.Appartments[i].CountRooms );
+                    AppartmentsList.Appartments[i].CountRooms, AppartmentsList.Appartments[i].Price);
                 comboBox1.Items.Add("апартаменти - " + AppartmentsList.Appartments[i].Number);
             }   
         }
@@ -34,10 +34,10 @@ namespace AdminHotel
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            dataGridView1.Rows.Add(AppartmentsList.Appartments[comboBox1.SelectedIndex].Number,
-                AppartmentsList.Appartments[comboBox1.SelectedIndex].Free,
-                AppartmentsList.Appartments[comboBox1.SelectedIndex].Price,
-                AppartmentsList.Appartments[comboBox1.SelectedIndex].CountRooms );
+            dataGridView1.Rows.Add("0000000" + comboBox1.SelectedIndex,
+                " Апартаменти - " + (AppartmentsList.Appartments[comboBox1.SelectedIndex].Number),                
+                AppartmentsList.Appartments[comboBox1.SelectedIndex].CountRooms, 
+                AppartmentsList.Appartments[comboBox1.SelectedIndex].Price);
         }
 
 
@@ -49,7 +49,8 @@ namespace AdminHotel
             {
                 dataGridView1.Rows.Add("0000000" + i,
                     " Апартаменти - " + (AppartmentsList.Appartments[i].Number),
-                    AppartmentsList.Appartments[i].CountRooms);
+                    AppartmentsList.Appartments[i].CountRooms,
+                    AppartmentsList.Appartments[i].Price);
             }
         }
 

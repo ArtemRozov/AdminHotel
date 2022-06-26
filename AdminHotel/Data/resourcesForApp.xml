@@ -3,6 +3,10 @@
 	<appartment number="1" free="free" price="500" countRooms="2" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 1 </appartment>
 	<appartment number="2" free="free" price="300" countRooms="1" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 2 </appartment>
 	<appartment number="3" free="free" price="400" countRooms="3" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 3 </appartment>
+	<appartment number="4" free="free" price="450" countRooms="2" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 4 </appartment>
+	<appartment number="5" free="free" price="500" countRooms="1" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 5 </appartment>
+	<appartment number="6" free="free" price="430" countRooms="1" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 6 </appartment>
+	<appartment number="7" free="free" price="420" countRooms="2" bron="False" name="" inn="" checkIn="" checkOut=""> appartment - 7 </appartment>
 	<contrAgent name="Ivanov" inn="1234567890" number="1"> people-1 </contrAgent>
 	<contrAgent name="" inn="" number=""> people-2 </contrAgent>
 	<contrAgent name="" inn="" number=""> people-3 </contrAgent>

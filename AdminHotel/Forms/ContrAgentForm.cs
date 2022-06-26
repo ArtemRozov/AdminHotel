@@ -81,5 +81,29 @@ namespace AdminHotel
                 e.Handled = true;
             }
         }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 3)
+                {
+                    AppartmentsList.ContrAgents[e.RowIndex].Name = "";
+                    AppartmentsList.ContrAgents[e.RowIndex].Inn = "";
+
+                    dataGridView1.Rows.Clear();
+                    for (int i = 0; i < AppartmentsList.ContrAgents.Count; i++)
+                    {
+                        if(AppartmentsList.ContrAgents[i].Name != "")
+                        {
+                            dataGridView1.Rows.Add("0000000" + AppartmentsList.ContrAgents[i].Number,
+                           AppartmentsList.ContrAgents[i].Name,
+                           AppartmentsList.ContrAgents[i].Inn);
+                        }                       
+                    }
+                    AppartmentsList.IsChanged = true;
+                }
+            }
+        }
     }
 }

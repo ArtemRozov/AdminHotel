@@ -62,13 +62,21 @@ namespace AdminHotel
             {
                 MessageBox.Show("Заповніть поле!\n" +
                        "1. Поле 'Дата в'їзду' повинно бути сьогоднішним днем або піздніше!");
-            } else if (dateTimePicker3.Value.Date <= dateTimePicker2.Value.Date)
+            } else if ((dateTimePicker3.Value.Date <= dateTimePicker2.Value.Date) ||
+                (dateTimePicker3.Value.Date.DayOfYear - DateTime.Now.DayOfYear > 7))
             {
                 MessageBox.Show("Заповніть поле!\n" +
-                       "1. Поле 'Дата виїзду' повинно бути більше ніж поле 'Дата в'їзду'!");
-            } else if (GuestsCountTextBox.Text == "" ||
-                int.Parse(GuestsCountTextBox.Text) <= 0 ||
-                int.Parse(GuestsCountTextBox.Text) >= 10)
+                       "1. Поле 'Дата виїзду' повинно бути більше ніж поле 'Дата в'їзду'!\n" +
+                       "2. Поле 'Дата виїзду' повинно бути не більш ніж на 7 днів вперед!");
+            } else if ((dateTimePicker3.Value.Date >
+                AppartmentsList.Appartments[AppartmentsComboBox.SelectedIndex].CheckIn) &&
+                (AppartmentsList.Appartments[AppartmentsComboBox.SelectedIndex].Name != "")) {
+                MessageBox.Show("Помилка!\n" +
+                       "На цю дату вже знято ці апартаменти'!");
+            }
+            else if (GuestsCountTextBox.Text == "" ||
+            int.Parse(GuestsCountTextBox.Text) <= 0 ||
+            int.Parse(GuestsCountTextBox.Text) >= 10)
             {
                 MessageBox.Show("Заповніть поле!\n" +
                        "1. Поле 'Кількість гостей' повинно бути заповненим!\n" +
